@@ -1,11 +1,11 @@
 import { ForwardedRef, forwardRef } from "react";
 
-interface IImageProps {
+interface IProps {
   url: string;
 }
 
 const ImageItem = forwardRef(function ImageItem(
-  props: IImageProps,
+  props: IProps,
   ref: ForwardedRef<HTMLImageElement>
 ) {
   const { url } = props;
