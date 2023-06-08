@@ -17,9 +17,9 @@ export default function useIntersectionObserver(cb: () => void) {
   const observer = useRef<IntersectionObserver>(new IntersectionObserver(callback, options));
 
   useEffect(() => {
-    const observCeurrent = observer.current;
+    const observeCurrent = observer.current;
     return () => {
-      observCeurrent.disconnect();
+      observeCurrent.disconnect();
     };
   }, []);
 
